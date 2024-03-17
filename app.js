@@ -218,7 +218,7 @@ app.put('/todos/:todoId', async (request, response) => {
     where id = ${todoId};`
       if (isValidCategory(category)) {
         data = await db.run(updateTodoQuery)
-        console.log(data);
+        console.log(data)
         response.send('Category Updated')
       } else {
         response.status(400)
@@ -230,7 +230,7 @@ app.put('/todos/:todoId', async (request, response) => {
     where id = ${todoId};`
       if (isValidPriority(priority)) {
         data = await db.run(updateTodoQuery)
-        console.log(data);
+        console.log(data)
         response.send('Priority Updated')
       } else {
         response.status(400)
